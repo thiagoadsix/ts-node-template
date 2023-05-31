@@ -1,7 +1,7 @@
 {
-  "name": "users",
+  "name": "template",
   "version": "1.0.0",
-  "description": "Project responsible to create an users service.",
+  "description": "Project responsible to create a template.",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
@@ -10,7 +10,7 @@
     "dev": "nodemon"
   },
   "keywords": [
-    "users",
+    "template",
     "node",
     "typescript"
   ],
