@@ -8,7 +8,7 @@
     "test": "jest",
     "start": "node dist/index.js",
     "dev": "nodemon",
-    "prepare": "husky install",
+    "prepare": "husky",
     "commit": "git add . && git-cz",
     "release": "standard-version"
   },
