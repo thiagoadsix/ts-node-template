@@ -1,4 +1,6 @@
-import { sum } from "./index";
+import { describe, expect, it } from "vitest";
+
+import { sum } from "../src/index";
 
 describe("Testing sum", () => {
   it("sum function", () => {
