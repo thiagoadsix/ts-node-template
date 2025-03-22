@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "start": "node dist/index.js",
+    "test": "vitest run --config vitest.config.mts",
+    "test:watch": "vitest --config vitest.config.mts",
+    "start": "node -r tsconfig-paths/register dist/index.js",
     "dev": "nodemon",
     "prepare": "husky",
     "commit": "git add . && git-cz",
@@ -20,6 +20,10 @@
   ],
   "author": "Thiago Andrade Silva",
   "license": "ISC",
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "fastify": "^4.29.0"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.5.4",
@@ -29,8 +33,10 @@
     "cz-customizable": "^7.0.0",
     "husky": "^9.1.6",
     "nodemon": "^3.1.4",
+    "pino-pretty": "^13.0.0",
     "standard-version": "^9.5.0",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4",
     "vitest": "^3.0.9"
   },

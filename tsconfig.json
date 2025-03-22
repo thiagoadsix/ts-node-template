@@ -4,7 +4,8 @@
       "ES2023"
     ],
     "target": "ES2022",
-    "module": "Node16",
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
@@ -15,12 +16,25 @@
     "experimentalDecorators": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@services/*": ["src/services/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@routes/*": ["src/routes/*"],
+      "@models/*": ["src/models/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@clients/*": ["src/clients/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@enums/*": ["src/enums/*"]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "__tests__"
   ],
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+    "node_modules"
   ]
 }
